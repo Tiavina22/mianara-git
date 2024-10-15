@@ -172,3 +172,18 @@ Les `tags` sont utilisés pour marquer des points spécifiques dans l'historique
 git tag -a v1.0 -m "Version 1.0 par exemple"
 git push origin v1.0
 ```
+
+## Quelques commandes avancées
+Plusieurs commandes avancée existent dans git, mais ce qui est important par exemple :
+- stash des modifications (ce qui permet de sauvegarder temporairement des modifications locales) :
+```bash
+git stash
+```
+- pour appliquer un stash (restaurer les modifications stachées) :
+```bash
+git stash apply
+```
+- on peut intégrer des commits de manière linéaire avec `rebase` :
+```bash
+git rebase branche_source
+```
