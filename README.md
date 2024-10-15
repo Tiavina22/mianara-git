@@ -150,3 +150,18 @@ git mv ancien_nom nouveau_nom
 ```bash
 git rm nom_du_fichier
 ```
+
+## Revenir en arrière sur des commits
+Il existe plusieurs façons de revenir à des version précédentes ou peut-être annuler des modifications :
+- pour réinitialiser un fichier modifié (ou annuler les changements locaux non commis) :
+```bash
+git checkout -- nom_du_fichier
+```
+- pour annuler un commit (sans supprimer les modifications) :
+```bash
+git reset --soft HEAD~1
+```
+- pour annuler un commit (en supprimant les modifications) :
+```bash
+git reset --hard HEAD~1
+```
