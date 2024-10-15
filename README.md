@@ -5,6 +5,7 @@ Git est système de gestion de versionning, permmettant de suivre les modificati
 - Si vous êtes sur `windows` : Débrouillez-vous seul
 - Si vous êtes sur `macOS` : Débrouillez-vous seul aussi
 - Si vous êtes sur `Linux` : ok, suivez les instructions suivantes :
+
 1 - Mettre à jour votre paquet d'abord
 ```bash
 sudo apt update
@@ -137,4 +138,15 @@ touch .gitignore
 
 # On peut ignorer les dossiers aussi comme les dossier importants par exemple ou les dossier inutiles
 importants/
+```
+
+## How to rename or remove the files in git
+Si on renomme ou supprime des fichiers, git doit être informé pour suivre ces changements :
+- pour renommer un fichier :
+```bash
+git mv ancien_nom nouveau_nom
+```
+- pour supprimer un fichier :
+```bash
+git rm nom_du_fichier
 ```
