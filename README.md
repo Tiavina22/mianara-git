@@ -98,3 +98,27 @@ git add nom_du_fichier_conflit
 ```shell
 git commit -m "Résolution des conflits"
 ```
+
+## Travailler avec des dépôts distants
+Git permet de collaborer via des dépôts distants (Sur github, gitlab et d'autres aussi). 
+- pour cloner un dépôt distant (c-à-d copier un dépôt sur votre machine) :
+```shell
+git clone URL_du_DEPOT
+```
+- pour ajouter un dépôt distant
+```shell
+git remote add origin URL_du_DEPOT
+```
+- pour envoyer les changements vers le dépôt distant
+```shell
+git push origin nom_de_la_branche
+```
+Mais on peut faire ça aussi :
+```shell
+git push -u origin nom_de_la_branche
+```
+Leur difference c'est que l'option -u : pousse la branche et configurer la branche locale pour suivre la branche distante
+- pour récupérer les changements depuis un dépôt distant :
+```shell
+git pull origin nom_de_la_branche
+```
