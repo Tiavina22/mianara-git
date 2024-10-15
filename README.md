@@ -25,15 +25,25 @@ git config --global user.email = "Votre Email"
 ```
 
 ## Initialisation
-Git fonctionne sur un dépôt ou repository en anglais dans lequel IGt suivra l'évolution de nos fichier.
+Git fonctionne sur un dépôt ou repository en anglais dans lequel git suivra l'évolution de nos fichier.
 Imaginons, on créer un simple projet avec dart avec le structure suivante :
 
 <img src="src/structure.png" alt="Texte alternatif" width="250">
 
-Pour initialiser git dans notre projet, il faut qu'on positionne dans le répértoire root de notre projet, et puis
+Pour initialiser git dans notre projet, il faut qu'on positionne dans le répértoire root de notre projet, et puis :
 ```shell
 git init
 ```
-Cela crée un répertoire .git dans notre dossier, où git stockera les informations sur l'historique des versions
+Cela crée un répertoire .git dans notre dossier, où git stockera les informations sur l'historique des versions :
 
 <img src="src/init.png" alt="Texte alternatif" width="500">
+
+## Suivi d'ajout des fichiers
+Git ne suit pas automaquement tous les fichiers dans notre répertoire. On devrait ajouter manuellement les fichiers qu'on souhaite suivre :
+```shell
+git add nom_du_fichier
+```
+Pour ajouter tous les fichiers d'un coup
+```shell
+git add .
+```
