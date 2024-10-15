@@ -78,3 +78,14 @@ git checkout nom_du_nouvelle_branche
 ```shell
 git checkout -b nom_du_nouvelle_branche
 ```
+
+## Fusion des branches (ce qu'on appelle merge)
+Imaginons, on a terminé de travailler sur une branche, on peut le fusionner dans une autre branche (généralement main)
+- il faut basculer vers la branche cible (ici main par exemple) :
+```shell
+git checkout main
+```
+- on le fusionne
+```shell
+git merge nom_du_nouvelle_branche
+```
