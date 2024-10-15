@@ -28,7 +28,7 @@ git config --global user.email = "Votre Email"
 Git fonctionne sur un dépôt ou repository en anglais dans lequel IGt suivra l'évolution de nos fichier.
 Imaginons, on créer un simple projet avec dart avec le structure suivante :
 
-<img src="src/structure.png" alt="Texte alternatif" width="100">
+<img src="src/structure.png" alt="Texte alternatif" width="250">
 
 Pour initialiser git dans notre projet, il faut qu'on positionne dans le répértoire root de notre projet, et puis
 ```shell
