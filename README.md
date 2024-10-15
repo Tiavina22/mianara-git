@@ -23,3 +23,16 @@ git config --global user.name = "Votre Nom"
 ```shell
 git config --global user.email = "Votre Email"
 ```
+
+## Initialisation
+Git fonctionne sur un dépôt ou repository en anglais dans lequel IGt suivra l'évolution de nos fichier.
+Imaginons, on créer un simple projet avec dart avec le structure suivante :
+
+<img src="src/structure.png" alt="Texte alternatif" width="500">
+
+Pour initialiser git dans notre projet, il faut qu'on positionne dans le répértoire root de notre projet, et puis
+```shell
+git init
+```
+Cela crée un répertoire .git dans notre dossier, où git stockera les informations sur l'historique des versions
+<img src="src/init.png" alt="Texte alternatif" width="500">
