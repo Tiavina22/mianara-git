@@ -165,3 +165,10 @@ git reset --soft HEAD~1
 ```bash
 git reset --hard HEAD~1
 ```
+
+## Tags c'est quoi ?
+Les `tags` sont utilisés pour marquer des points spécifiques dans l'historique git.
+```bash
+git tag -a v1.0 -m "Version 1.0 par exemple"
+git push origin v1.0
+```
