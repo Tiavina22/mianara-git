@@ -13,3 +13,13 @@ sudo apt update
 ```shell
 sudo apt install git
 ```
+De vita ny chocolat
+
+## Il faut le configurer 
+Aprè l'installation, il faut que vous configure votre informations d'utilisateur pour que git puisse les utiliser dans vos commits
+```shell
+git config --global user.name = "Votre Nom"
+```
+```shell
+git config --global user.email = "Votre Email"
+```
