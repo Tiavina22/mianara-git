@@ -47,3 +47,11 @@ Pour ajouter tous les fichiers d'un coup
 ```shell
 git add .
 ```
+
+<img src="src/ajout.png" alt="Texte alternatif" width="500">
+
+## Validation des commit (ou modifications)
+Une fois les fichiers ajoutés, on devra `commiter`les changements pour les sauvegarder dans l'historique git.
+```shell
+git commit -m "Votre message de commit, ici essayer de spécifier ou de quoi vraiment votre modification"
+```
