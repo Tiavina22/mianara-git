@@ -89,3 +89,12 @@ git checkout main
 ```shell
 git merge nom_du_nouvelle_branche
 ```
+
+## Les conflits
+Lors d'une fusion, parfois git détecte des conflits entre les modifications des différentes branches. On devrait resoudre ces conflits manuellement dans les fichiers concernés, puis valider la résolution
+```shell
+git add nom_du_fichier_conflit
+```
+```shell
+git commit -m "Résolution des conflits"
+```
