@@ -51,7 +51,17 @@ git add .
 <img src="src/ajout.png" alt="Texte alternatif" width="500">
 
 ## Validation des commit (ou modifications)
-Une fois les fichiers ajoutés, on devra `commiter`les changements pour les sauvegarder dans l'historique git.
+Une fois les fichiers ajoutés, on devra `commiter` les changements pour les sauvegarder dans l'historique git :
 ```shell
 git commit -m "Votre message de commit, ici essayer de spécifier ou de quoi vraiment votre modification"
 ```
+
+## Visualisation des historiques du commit
+Pour voir l'historique des changements sauvegarder dans le dépôt :
+```shell
+git log
+```
+
+<img src="src/log.png" alt="Texte alternatif" width="500">
+
+## Travaille avec des branches
