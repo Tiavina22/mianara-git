@@ -35,4 +35,5 @@ Pour initialiser git dans notre projet, il faut qu'on positionne dans le répér
 git init
 ```
 Cela crée un répertoire .git dans notre dossier, où git stockera les informations sur l'historique des versions
+
 <img src="src/init.png" alt="Texte alternatif" width="500">
