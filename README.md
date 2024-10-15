@@ -6,21 +6,21 @@ Git est système de gestion de versionning, permmettant de suivre les modificati
 - Si vous êtes sur `macOS` : Débrouillez-vous seul aussi
 - Si vous êtes sur `Linux` : ok, suivez les instructions suivantes :
 1 - Mettre à jour votre paquet d'abord
-```shell
+```bash
 sudo apt update
 ```
 2 - Installer git maintenant
-```shell
+```bash
 sudo apt install git
 ```
 De vita ny chocolat
 
 ## Il faut le configurer 
 Aprè l'installation, il faut que vous configure votre informations d'utilisateur pour que git puisse les utiliser dans vos commits
-```shell
+```bash
 git config --global user.name = "Votre Nom"
 ```
-```shell
+```bash
 git config --global user.email = "Votre Email"
 ```
 
@@ -31,7 +31,7 @@ Imaginons, on créer un simple projet avec dart avec le structure suivante :
 <img src="src/structure.png" alt="Texte alternatif" width="250">
 
 Pour initialiser git dans notre projet, il faut qu'on positionne dans le répértoire root de notre projet, et puis :
-```shell
+```bash
 git init
 ```
 Cela crée un répertoire .git dans notre dossier, où git stockera les informations sur l'historique des versions :
@@ -40,11 +40,11 @@ Cela crée un répertoire .git dans notre dossier, où git stockera les informat
 
 ## Suivi d'ajout des fichiers
 Git ne suit pas automaquement tous les fichiers dans notre répertoire. On devrait ajouter manuellement les fichiers qu'on souhaite suivre :
-```shell
+```bash
 git add nom_du_fichier
 ```
 Pour ajouter tous les fichiers d'un coup
-```shell
+```bash
 git add .
 ```
 
@@ -52,13 +52,13 @@ git add .
 
 ## Validation des commit (ou modifications)
 Une fois les fichiers ajoutés, on devra `commiter` les changements pour les sauvegarder dans l'historique git :
-```shell
+```bash
 git commit -m "Votre message de commit, ici essayer de spécifier ou de quoi vraiment votre modification"
 ```
 
 ## Visualisation des historiques du commit
 Pour voir l'historique des changements sauvegarder dans le dépôt :
-```shell
+```bash
 git log
 ```
 
@@ -67,58 +67,74 @@ git log
 ## Travaille avec des branches
 Une `branche`c'est quoi ? C'est une version parallèle du p'un projet. Par défaut git commence avec une branche `main` ou `master` . Mais on peut créer d'autres branches pour travailler sur des fonctionnalités et implémentations spécifiques pour les séparer et de les fusionner plus tard.
 - pour créer une nouvelle branche :
-```shell
+```bash
 git branch nom_du_nouvelle_branche
 ```
 - pour basculer vers une branche
-```shell
+```bash
 git checkout nom_du_nouvelle_branche
 ```
 - pour créer et de passer vers une nouvelle branche d'un coup
-```shell
+```bash
 git checkout -b nom_du_nouvelle_branche
 ```
 
 ## Fusion des branches (ce qu'on appelle merge)
 Imaginons, on a terminé de travailler sur une branche, on peut le fusionner dans une autre branche (généralement main)
 - il faut basculer vers la branche cible (ici main par exemple) :
-```shell
+```bash
 git checkout main
 ```
 - on le fusionne
-```shell
+```bash
 git merge nom_du_nouvelle_branche
 ```
 
 ## Les conflits
 Lors d'une fusion, parfois git détecte des conflits entre les modifications des différentes branches. On devrait resoudre ces conflits manuellement dans les fichiers concernés, puis valider la résolution
-```shell
+```bash
 git add nom_du_fichier_conflit
 ```
-```shell
+```bash
 git commit -m "Résolution des conflits"
 ```
 
 ## Travailler avec des dépôts distants
 Git permet de collaborer via des dépôts distants (Sur github, gitlab et d'autres aussi). 
 - pour cloner un dépôt distant (c-à-d copier un dépôt sur votre machine) :
-```shell
+```bash
 git clone URL_du_DEPOT
 ```
 - pour ajouter un dépôt distant
-```shell
+```bash
 git remote add origin URL_du_DEPOT
 ```
 - pour envoyer les changements vers le dépôt distant
-```shell
+```bash
 git push origin nom_de_la_branche
 ```
 Mais on peut faire ça aussi :
-```shell
+```bash
 git push -u origin nom_de_la_branche
 ```
-Leur difference c'est que l'option -u : pousse la branche et configurer la branche locale pour suivre la branche distante
+Leur difference c'est que l'option `-u` : pousse la branche et configurer la branche locale pour suivre la branche distante
 - pour récupérer les changements depuis un dépôt distant :
-```shell
+```bash
 git pull origin nom_de_la_branche
+```
+
+## Comment ignorer les fichiers (comme les node_modules kkkk) ?
+On devrait créer un fichier `.gitignore` . Ce fichier indique à git quels fichiers ne doivent pas êtres suivis, et ne pas les envoyer, pour ignorer les fichiers et les dossier par exemple :
+- on créer le fichier .gitignore d'abord
+```bash
+touch .gitignore
+```
+- puis copiez ce code dans ce fichier .gitignore
+```bash
+# On peut ignorer les fichiers .log, .env par exemple
+*.log
+.env
+
+# On peut ignorer les dossiers aussi comme les dossier importants par exemple ou les dossier inutiles
+importants/
 ```

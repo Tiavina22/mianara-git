@@ -1,0 +1,6 @@
+# On peut ignorer les fichiers .log, .env par exemple
+*.log
+.env
+
+# On peut ignorer les dossiers aussi comme les dossier importants par exemple ou les dossier inutiles
+importants/
