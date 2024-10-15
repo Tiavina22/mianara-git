@@ -65,3 +65,16 @@ git log
 <img src="src/log.png" alt="Texte alternatif" width="500">
 
 ## Travaille avec des branches
+Une `branche`c'est quoi ? C'est une version parallèle du p'un projet. Par défaut git commence avec une branche `main` ou `master` . Mais on peut créer d'autres branches pour travailler sur des fonctionnalités et implémentations spécifiques pour les séparer et de les fusionner plus tard.
+- pour créer une nouvelle branche :
+```shell
+git branch nom_du_nouvelle_branche
+```
+- pour basculer vers une branche
+```shell
+git checkout nom_du_nouvelle_branche
+```
+- pour créer et de passer vers une nouvelle branche d'un coup
+```shell
+git checkout -b nom_du_nouvelle_branche
+```
