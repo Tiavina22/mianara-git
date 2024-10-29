@@ -151,6 +151,11 @@ git mv ancien_nom nouveau_nom
 git rm nom_du_fichier
 ```
 
+## Re ignorer un fichier qui a déja envoyé et suivi par git
+```bash
+git rm -r --cached nom_du_fichier
+```
+
 ## Revenir en arrière sur des commits
 Il existe plusieurs façons de revenir à des version précédentes ou peut-être annuler des modifications :
 - pour réinitialiser un fichier modifié (ou annuler les changements locaux non commis) :
